@@ -11,6 +11,7 @@ import com.neo.neoTour.exception.TourNotFoundException;
 import com.neo.neoTour.mapper.TourMapper;
 import com.neo.neoTour.repository.ImageRepository;
 import com.neo.neoTour.repository.TourRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Limit;
 import org.springframework.data.domain.PageRequest;
@@ -49,6 +50,7 @@ public class TourService {
         return tourMapper.convertToDto(tour);
     }
 
+    @Transactional
     public void createTour(TourRequestDto tourRequestDto,
                            MultipartFile image){
         if (tourRequestDto == null || image == null) {

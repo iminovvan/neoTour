@@ -1,4 +1,4 @@
-package com.neo.neoTour.controller;
+package com.neo.neoTour.controller.admin;
 
 import com.neo.neoTour.dto.TourRequestDto;
 import com.neo.neoTour.dto.TourResponseDto;

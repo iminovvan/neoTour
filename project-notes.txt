@@ -1,0 +1,36 @@
+
+Tour Controller
+    * Anon User: find tour by ID
+        * find Featured tours
+        * find Popular tours
+        * find Most Viewed tours
+        * find Recommended tours by seasons
+
+Admin Tour Controller
+    * Admin User:
+        * get all tours
+        * get tour by ID
+        * add new tours
+        * delete tour by ID
+        * update created tour
+
+Booking Controller
+    * Anon User:
+        * book a tour by ID
+
+Admin Booking Controller
+    Admin User:
+        * get all bookings
+        * delete booking by ID
+
+Review Controller
+    Anon User:
+        * get all Reviews by Tour ID
+
+Admin Review Controller
+    Admin User:
+        * get all Reviews
+        * delete Review by ID
+        * create new Review
+
+

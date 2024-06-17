@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class TourMapper {
     private final ReviewMapper reviewMapper;
+    private final BookingMapper bookingMapper;
 
     public TourResponseDto convertToDto(Tour tour){
         return new TourResponseDto(
@@ -24,6 +25,7 @@ public class TourMapper {
                 tour.getImage().getImageUrl(),
                         //getImages().stream().map(Image::getImageUrl).toList(), // create a string of image URLs
                 tour.getReviews().stream().map(reviewMapper::convertToDto).toList()
+                //tour.getBookings().stream().map(bookingMapper::convertToDto).toList()
         );
     }
 

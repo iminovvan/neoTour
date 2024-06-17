@@ -38,14 +38,16 @@ public class Tour {
     @JoinColumn(name = "location_id")
     private Location location;
 
-    @OneToMany(mappedBy = "tour")
-    private List<Review> reviews;
+    @OneToMany(mappedBy = "tour", cascade = CascadeType.ALL)
+    private List<Review> reviews = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "image_id")
     private Image image;
-
-    @OneToMany(mappedBy = "tour")
-    List<Booking> bookings;
-
 }
+    /*
+    @OneToMany(mappedBy = "tour")
+    private List<Booking> bookings;
+     */
+
+

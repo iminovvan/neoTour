@@ -22,10 +22,12 @@ public class Review {
     private String reviewText;
     @Column(name = "review_date")
     private LocalDateTime reviewDate;
-    @ManyToOne //(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToOne
     @JoinColumn(name = "tour_id")
     private Tour tour;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @Column(name = "username")
+    private String username;
 }

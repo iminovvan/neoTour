@@ -14,7 +14,7 @@ public class ReviewMapper {
     public ReviewResponseDto convertToDto(Review review){
         return new ReviewResponseDto(
                 review.getId(),
-                review.getUser().getEmail(),
+                review.getUsername(),
                 review.getReviewText(),
                 review.getReviewDate()
         );

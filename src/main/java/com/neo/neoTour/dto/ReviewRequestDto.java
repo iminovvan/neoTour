@@ -3,7 +3,8 @@ package com.neo.neoTour.dto;
 import java.io.Serializable;
 
 public record ReviewRequestDto(
-        Long id,
+        Long tourId,
+        Long userId,
         String username,
         String text
 ) implements Serializable {

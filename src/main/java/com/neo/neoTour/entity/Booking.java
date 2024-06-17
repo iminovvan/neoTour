@@ -27,7 +27,7 @@ public class Booking {
     private LocalDate bookingDate;
     @Column(name = "comment")
     private String comment;
-    @ManyToOne
+    @ManyToOne(fetch =  FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "tour_id")
     private Tour tour;
     @ManyToOne

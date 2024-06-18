@@ -23,9 +23,7 @@ public class TourMapper {
                 tour.getLocation().getPlace(),
                 tour.getLocation().getCountry(),
                 tour.getImage().getImageUrl(),
-                        //getImages().stream().map(Image::getImageUrl).toList(), // create a string of image URLs
                 tour.getReviews().stream().map(reviewMapper::convertToDto).toList()
-                //tour.getBookings().stream().map(bookingMapper::convertToDto).toList()
         );
     }
 

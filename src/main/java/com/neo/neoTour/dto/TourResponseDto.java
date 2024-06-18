@@ -11,8 +11,8 @@ public record TourResponseDto (
         String description,
         String place,
         String country,
-        String image, // string of image URL
-        List<ReviewResponseDto> reviews // list if Review Dtos
+        String image,
+        List<ReviewResponseDto> reviews
         //List<BookingResponseDto> bookings
 ) implements Serializable {
 }

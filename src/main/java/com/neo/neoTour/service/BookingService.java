@@ -33,17 +33,6 @@ public class BookingService {
 
         validateBooking(bookingRequestDto);
 
-        //check the existence of the User by Phone Number
-
-        /*
-        User user = userRepository.findByPhoneNumber(bookingRequestDto.phoneNumber())
-                .orElseGet(() -> {
-                    User newUser = new User();
-                    newUser = userService.registerNewUser(bookingRequestDto.phoneNumber());
-                    return newUser;
-                });
-*/
-         
 
         User user;
         if (userRepository.existsByPhoneNumber(bookingRequestDto.phoneNumber())) {

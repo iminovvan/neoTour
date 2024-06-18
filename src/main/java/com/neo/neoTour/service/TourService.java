@@ -32,16 +32,12 @@ public class TourService {
     private final CloudinaryService cloudinaryService;
     private final ImageRepository imageRepository;
 
-
-    // ***************************************************************************
-    //                                ADMIN CONTROLLER
-    // ***************************************************************************
     public List<TourResponseDto> findAllTours(){
-        List<Tour> allTours = tourRepository.findAll(); // get List<Tour> from DB
+        List<Tour> allTours = tourRepository.findAll();
         if (allTours == null || allTours.isEmpty()) {
             throw new EmptyListException("There are no tours available.");
         }
-        return tourMapper.convertToDtoList(allTours); // List<Tour> --> List<TourSimpleDto>
+        return tourMapper.convertToDtoList(allTours);
     }
 
     public TourResponseDto getTourById(Long id){
@@ -120,15 +116,8 @@ public class TourService {
         tourRepository.deleteById(id);
     }
 
-
-
-
-
-
-
     // ***************************************************************************
-    //                               USER CONTROLLER
-    // ***************************************************************************
+
     public TourResponseDto findTourById(Long id){
         Tour tour = tourRepository.findById(id).orElseThrow(() -> new TourNotFoundException("Tour with id: " + id + " not found."));
         incrementTourViews(id);

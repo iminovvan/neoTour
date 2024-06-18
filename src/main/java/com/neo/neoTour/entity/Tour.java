@@ -45,9 +45,6 @@ public class Tour {
     @JoinColumn(name = "image_id")
     private Image image;
 }
-    /*
-    @OneToMany(mappedBy = "tour")
-    private List<Booking> bookings;
-     */
+
 
 

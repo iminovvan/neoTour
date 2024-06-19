@@ -17,8 +17,8 @@ import io.swagger.v3.oas.annotations.servers.Server;
         ),
         servers = {
                 @Server(
-                        description = "Localhost",
-                        url = "http://localhost:8080"
+                        description = "Railway Server",
+                        url = "https://neotour-production-0f7a.up.railway.app"
                 )
         }
 )
